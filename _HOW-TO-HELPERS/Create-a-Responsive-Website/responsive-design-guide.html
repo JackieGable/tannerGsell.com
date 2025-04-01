@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner’s Guide to Responsive Web Design</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #333;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    # 🌐 Beginner’s Guide to Responsive Web Design with CSS Grid and Flexbox<br><br>## 🔰 Who This Guide Is
+    For<br><br>If
+    you already know how to build websites using HTML, CSS, and a little JavaScript but don’t know how to make them
+    responsive, this guide is for you. We'll walk through how to make your layouts work on both large and small
+    screens—using as little code as possible.<br><br>## 🧠 What You’ll Learn<br><br>- What responsive web design
+    means<br>- When to use CSS Grid vs. Flexbox<br>- How to build a simple, responsive layout<br>- How to use media
+    queries to handle small screen sizes<br>- How to test your site on different devices<br><br>## 🛠️ Tools You'll
+    Use<br><br>- A text/code editor (like VSCode)<br>- Your web browser and its developer tools<br>- HTML and CSS (with
+    Grid or Flexbox)<br>- Media queries for responsiveness<br><br>## 📐 Step 1: What Is Responsive
+    Design?<br><br>Responsive design means your layout adapts to the screen it’s on. For example:<br><br>- On a
+    **desktop**, content might be in two or three columns.<br>- On a **phone**, everything stacks vertically.<br><br>We
+    accomplish this by using flexible layouts (like Grid or Flexbox) and media queries.<br><br>## 🏗️ Step 2: Start with
+    HTML Structure<br><br>Here’s a basic webpage layout:<br><br>
+    <pre><code class="language-html"><br><body><br>  <header>My Site</header><br>  <nav>Navigation</nav><br>  <main>Main Content</main><br>  <aside>Sidebar</aside><br>  <footer>Footer</footer><br></body><br></code></pre>
+    <br><br>You’ll use CSS to lay these out depending on the screen size.<br><br>## 🧱 Step 3: Layout with CSS Grid
+    (best
+    for full-page layouts)<br><br>
+    <pre><code class="language-css"><br>body {<br>  display: grid;<br>  grid-template-areas:<br>    "header header"<br>    "nav main"<br>    "nav aside"<br>    "footer footer";<br>  grid-template-columns: 1fr 3fr;<br>  gap: 1rem;<br>  max-width: 1200px;<br>  margin: 0 auto;<br>  padding: 1rem;<br>}<br><br>header { grid-area: header; }<br>nav { grid-area: nav; }<br>main { grid-area: main; }<br>aside { grid-area: aside; }<br>footer { grid-area: footer; }<br></code></pre>
+    <br><br>This gives you two columns on wider screens, with the nav and sidebar on the left and right.<br><br>## 📱
+    Step
+    4: Make It Responsive with Media Queries<br><br>Now let’s stack everything vertically on smaller screens:<br><br>
+    <pre><code class="language-css"><br>@media (max-width: 768px) {<br>  body {<br>    grid-template-areas:<br>      "header"<br>      "nav"<br>      "main"<br>      "aside"<br>      "footer";<br>    grid-template-columns: 1fr;<br>  }<br>}<br></code></pre>
+    <br><br>That’s it—your layout is now responsive!<br><br>## 🔄 Bonus: Same Layout with Flexbox (good for simple
+    flows)<br><br>If your layout is less complex, Flexbox might be easier:<br><br>### HTML:<br><br>
+    <pre><code class="language-html"><br><body><br>  <header>Header</header><br>  <div class="content"><br>    <nav>Nav</nav><br>    <main>Main</main><br>    <aside>Sidebar</aside><br>  </div><br>  <footer>Footer</footer><br></body><br></code></pre>
+    <br><br>### CSS:<br><br>
+    <pre><code class="language-css"><br>.content {<br>  display: flex;<br>  gap: 1rem;<br>}<br><br>@media (max-width: 768px) {<br>  .content {<br>    flex-direction: column;<br>  }<br>}<br></code></pre>
+    <br><br>Use Flexbox when you’re laying things out in a line—like navigation menus or side-by-side boxes.<br><br>## ✅
+    Step 5: Test Your Layout<br><br>Open your browser's developer tools and toggle device emulation (usually the
+    phone/tablet icon). Resize your browser window and watch how the layout adapts.<br><br>## 📌 Summary<br><br>- Use
+    **CSS Grid** for full-page layouts<br>- Use **Flexbox** for row/column-based components<br>- Write **mobile-first**
+    or
+    **desktop-first** CSS—it’s up to you, just be consistent<br>- Media queries are your friend!<br>- Test early and
+    often
+    on different screen sizes<br>
+</body>
+
+</html>

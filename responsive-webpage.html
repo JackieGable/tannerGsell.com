@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+    <style>
+        body,
+        html {
+            color: #222;
+            font-size: 100%;
+            font-family: Arial, sans-serif;
+            line-height: 1.5rem;
+            margin: 0 auto;
+            max-width: 1200px;
+            overflow-x: hidden;
+            padding: 1rem;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            color: #222;
+            margin: 0;
+            padding-bottom: 16px;
+
+        }
+
+        p,
+        li,
+        a {
+            font-size: 1rem;
+            color: #222;
+        }
+
+        /* Style the links */
+        a {
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* When link is hovered, underline it */
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Center content on page */
+        .center {
+            text-align: center;
+        }
+
+        /* Style the list items */
+        .numberedList {
+            color: darkgray;
+            margin-left: 30px;
+        }
+
+        ul.list {
+            padding-left: 2rem;
+            line-height: 1.5rem;
+        }
+
+        /* Style the header */
+        .header {
+            color: #222;
+            font-size: 2.5rem;
+            padding-bottom: 2rem;
+            padding-top: 1.5rem;
+            text-align: center;
+        }
+
+        /* Style the code items */
+        code {
+            font-size: 1.5rem;
+            color: red;
+        }
+
+        /* Add padding to each div */
+        div {
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+        }
+
+
+        /* Layout for desktops */
+        body {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "nav main"
+                "nav aside"
+                "footer footer";
+            grid-template-columns: 1fr 3fr;
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        nav {
+            grid-area: nav;
+        }
+
+        main {
+            grid-area: main;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        /* Layout for Mobile Devices */
+        @media (max-width: 768px) {
+            body {
+                grid-template-areas:
+                    "header"
+                    "nav"
+                    "main"
+                    "aside"
+                    "footer";
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        /****************** SIDEBAR NAV MENU  ***********************/
+        nav ul {
+            list-style-type: none;      /* Removes the bullets */
+            margin: 0;         /* Removes default margin */
+            padding: 0;        /* Removes default padding */
+        }
+
+        nav li {
+            margin-bottom: 10px;   /* Adds space between the list items */
+        }
+
+
+        /**************** FOOTER **********************/
+
+        /* Divider styling */
+        .footer-divider {
+            border: none;
+            border-top: 1px solid #ccc;     /* Thin horizontal line */
+            margin: 5px 0;     /* Spacing above and below the line */
+        }
+
+        /* Copyright styling */
+        .footer-copyright {
+            display: block;
+            font-size: 0.875rem;
+            line-height: 1.3rem;
+            margin: 0px auto;
+            text-align: center;
+        }
+
+        /* Flag Image styling */
+        img.flag {
+            display: inline;
+            margin-left: 5px;
+            margin-right: 5px;
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="header">TannerGsell.com</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div>
+            <h2>How to insert Lorem Ipsum automatically</h2>
+            <p>To insert Lorem Ipsum text in Visual Studio Code, you can use the built-in Emmet abbreviation feature.
+                Here's how:</p>
+
+            <ol class="numberedList">
+                <li>In your HTML file, type <code>lorem</code> where you want the placeholder text to appear.</li>
+                <li>After typing lorem, press the <code>Tab</code> key (or Enter, depending on your settings). This will
+                    generate a paragraph of Lorem Ipsum text.</li>
+                <li>You can also customize the number of words by adding a number after lorem. For example:</li>
+                <ul class="list">
+                    <li> lorem10 will generate 10 words.</li>
+                    <li>lorem50 will generate 50 words.</li>
+                </ul>
+            </ol>
+            <p>If you want multiple paragraphs, you can use Emmet syntax like <code>p*3&gt;lorem10</code>, which creates
+                three &lt;p&gt; elements, each containing 10 words of Lorem Ipsum.</p>
+        </div>
+
+        <div>
+            <h2>What are REM units?</h2>
+            <p>A rem is a Root-relative units and is best used for consistent sizing throughout the page. </p>
+            <p>rem is relative to the root element's font size <code>(html { font-size: })</code>, ensuring consistent
+                scaling across the entire document, regardless of nesting.</p>
+            <p>If you're designing for accessibility or responsive typography, changing the root font size (e.g., using
+                media queries) will proportionally update all sizes defined in rem, making it globally responsive.</p>
+            <p>Using <b>rem</b> instead of <b>em</b> will avoid cascading issues. Since rem ignores the size of parent
+                elements, it's ideal for setting global styles, such as body text, headings, and margins, where you want
+                consistent sizing throughout the page.</p>
+        </div>
+    </main>
+    <aside>
+        <h2>Aside</h2>
+        <p>In HTML, the <code>&lt;aside&gt;</code> element is used to represent content that is tangentially related to
+            the main content of the document. It is often used for sidebars, pull quotes, callout boxes, or any
+            additional information that complements the main content but isn't directly part of it.</p>
+
+    </aside>
+   <footer>
+        <div class="footer-divider"></div>
+        <footer class="footer-copyright">
+            Copyright © 2025 TannerGsell.com
+            <img src="/assets/img/en.png" height="20" width="20" class="flag" alt="US Flag" loading="lazy">
+            <br>
+            <!-- When you view this site in the browser, the current date will appear here. -->
+        </footer>
+   </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get the current date
+            const currentDate = new Date();
+
+            // Format the date as "MMMM d, yyyy"
+            const options = {month: "long", day: "numeric", year: "numeric"};
+            const formattedDate = currentDate.toLocaleDateString("en-US", options);
+
+            // Find the "Updated:" section in the footer and add the date
+            const footerElement = document.querySelector(".footer-copyright");
+            footerElement.innerHTML += `Updated: ${formattedDate}`;
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+body,
+html {
+  color: #222;
+  font-size: 100%;
+  font-family: Arial, sans-serif;
+  line-height: 1.5rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  overflow-x: hidden;
+  padding: 1rem;
+  background-color: whitesmoke;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: #222;
+  margin: 0;
+  padding-bottom: 16px;
+
+}
+
+p,
+li,
+a {
+  font-size: 1rem;
+  color: #222;
+}
+
+/* Style the links */
+a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* When link is hovered, underline it */
+a:hover {
+  text-decoration: underline;
+}
+
+div {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.py-2 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+nav {
+  padding: 1rem;
+  background-color: transparent;
+}
+
+nav a {
+  margin-right: 10px;
+
+}
+
+pre {
+  background-color: black;
+  color: white;
+}
+
+hr.short {
+  max-width: 50%
+}

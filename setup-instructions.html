@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js"></script>
+    <title>Setup Instructions</title>
+</head>
+<body>
+<div>
+    <h1>Step by Step Instructions for Setting Up a Website and Publishing It</h1>
+    <p>NOTE: This webpage is getting it's styling from:
+        
+        <code>
+                /css/style.css  
+        </code>
+       
+    </p>
+</div>
+
+<!-- STEP 1 -->
+<div>
+    <h2>✅ Step 1: Set Up Your Website Folder</h2>
+    <p>1. Create a folder on your computer where your website files will live.</p>
+    <em>If you are using Windows, create the folder on your desktop so you can find it easier.</em>
+
+    <p>2. Name it something like <b>tannergsell</b> (no spaces).</p>
+
+    <p>3. Inside that folder, create the following files:</p>
+    <ul>
+        <li>index.html → this will be your homepage.</li>
+        <li>about.html → a page about you </li>
+        <li>contact.html → a contact page.</li>
+        <li>style.css → for your CSS styles.</li>
+        <li>script.js → for any JavaScript.</li>
+    </ul>
+</div>
+
+
+<div>
+    <p>👉 This is what your folder should look like:</p>
+    <p>
+        <pre><code>
+    tannergsell/
+    ├── index.html
+    ├── about.html
+    ├── contact.html
+    ├── style.css
+    └── script.js
+    </code></pre>
+    </p>
+</div>
+
+<!-- STEP 2 -->
+<div>
+    <h2>✅ Step 2: Open the Folder in VSCode</h2>
+    <p>1. Open Visual Studio Code (VSCode).</p>
+    <p>2. Go to File &gt; Open Folder.</p>
+    <p>3. Select your <b>tannergsell</b> folder.</p>
+    <p>You’ll now see your files listed in the Explorer on the left.</p>
+</div>
+
+<!-- STEP 3-->
+<div>
+    <h2>✅ Step 3: Add Basic HTML to Each Page</h2>
+    <p>You can paste this as a starting point into each .html file:</p>
+    <pre><code>
+    &lt;!DOCTYPE html &gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Home - Website for Tanner Gsell&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css" /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;h1&gt;Welcome to My Website &lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;a href="index.html"&gt;Home&lt;/a&gt; |
+        &lt;a href="about.html"&gt;About&lt;/a&gt; |
+        &lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+    &lt;/nav&gt;
+    &lt;p&gt;This is the homepage.&lt;/p&gt;
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </code></pre>
+
+    <p>Repeat this for about.html and contact.html, just change the &lt;title&gt; and &lt;h1&gt; text.</p>
+</div>
+
+<!-- STEP 4 -->
+<div>
+    <h2>✅ Step 4: Add Styles and JS (Optional)</h2>
+    <p>Open style.css and add some basic styling, then save the file:</p>
+    <pre><code>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        nav a {
+            margin-right: 10px;
+        }
+
+    </code></pre>
+</div>
+
+<div>
+    <p>Open script.js and add something simple to test it works, like this:</p>
+    <pre>
+        <code>
+          console.log("Your website is working!");  
+        </code>
+    </pre>
+</div>
+
+
+<!-- STEP 5 -->
+<div>
+    <h2>✅ Step 5: Preview Your Website</h2>
+    <p>You can install the Live Server extension in VSCode to preview locally:</p>
+    
+    <p>
+        1. In VSCode, go to Extensions (left sidebar) and search for:
+        Live Server
+    </p>
+    <p>2. Click Install.</p>
+    <p>
+        3. Now right-click index.html and choose "Open with Live Server".
+        Your default browser will open with a live preview and you should see the page as it will look when you publish it. 
+    </p>
+    <p><b>NOTE:</b> You will need to use the developer tools in order to see the console.log</p>
+    <ul>
+        <li>Open your webpage in a browser, then right click and select INSPECT</li>
+        <li>Click on the CONSOLE tab</li>
+        <li>You should see: <code>Your website is working!</code> </li>
+    </ul>
+</div>
+
+<!-- STEP 6 -->
+
+<div>
+    <h2>✅ Step 6: Upload Files to Web Hosting Server</h2>
+    <p>Here are your FTP credentials (provided by your web host). </p>
+    <ul>
+        <li>Host/server: <b>200.225.43.151</b></li>
+        <li>Username: <b>tanner</b></li>
+        <li>Password: <b>Jackie will text you</b></li>
+        <li>Port: <b>21</b></li>
+    </ul>
+</div>
+
+<div>
+    <h3>Use <a href="https://filezilla-project.org/">FileZilla</a> to transfer files to server (recommended for beginners)</h3>
+    <p>1. Download and install FileZilla.</p>
+    <p>2. Open FileZilla and fill in the top bar with the following:</p>
+    <p>3. Host: <b>200.225.43.151</b></p>
+    <p>4. Username: <b>tanner</b>  </p>
+    <p>5. Password: (see text from Jackie)</p>
+    <p>6. Port: usually leave it as <b>21</b></p>
+    <p>7. Click <b>Quickconnect.</b></p>
+</div>
+
+<div>
+    <h3>Once connected:</h3>
+    <p>1. On the left side, find your <b>tannergsell</b> folder.</p>
+    <p>2. On the right side, open the folder where your website files go (usually <b>public_html</b>).</p>
+    <p>3. Drag and drop all your files (index.html, style.css, script.js, etc.) from the left side into the right side.</p>
+    <p>4. Wait for the upload to finish.</p>
+</div>
+
+<!-- STEP 7 -->
+<div>
+    <h2>✅ Step 7: Test Your Website Online</h2>
+    <p>Open a browser and go to your domain name:
+    <b>https://tannergsell.com/index.html</b>
+    </p>
+    <p>You should see your homepage!</p>
+    <p>Click the About and Contact links to make sure everything is working.</p>
+</div>
+
+
+<div>
+    <h2>✅ Optional: Organize Further</h2>
+    <p>You could add folders later, like:</p>
+
+    <ul>
+    <li>images/ for pictures</li>
+    <li>css/ if you want to move your stylesheets there</li>
+    <li>js/ for JavaScript files</li>
+    </ul>
+    <p>But for now, keeping everything in one folder is great for learning.</p>
+</div>
+
+
+
+<div>
+    <h3>Troubleshooting:</h3>
+    
+    <p>Check file paths, making sure uploads go to the right directory.</p>
+    <p>Clear browser cache or open website in incognito mode.</p>
+    
+</div>
+</body>
+</html>
