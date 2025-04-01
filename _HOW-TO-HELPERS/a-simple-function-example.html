@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Simple Function Example</title>
+<style>
+html, body {
+height: 100%;
+font-size:1rem;
+font-family: Arial, sans-serif;
+}
+img, picture, video, canvas, svg {
+display: block;
+max-width: 100%;
+}
+.container {
+max-width:60rem;
+margin: 1rem auto;
+padding-bottom:2rem;
+}
+pre {
+background-color:black;
+color:white;
+padding:10px;
+max-width: 600px;
+}
+.limited{max-width:80ch; padding:10px;}
+.callout{max-width:600px; 
+background-color: red; 
+color:white; 
+padding:10px; 
+margin-top:20px;
+font-size:1.2rem;}
+</style>
+</head>
+<body>
+<section class="container">
+<h1>How to write a simple javascript function</h1>
+<div class="limited">
+<h2>Definining a Function</h2>
+<p>The most common way to define a function in JavaScript is by using the 'function' keyword, followed by a unique function name, a list of parameters (that might be empty), and a statement block surrounded by curly braces.</p>
+<p>
+Here is an example of a simple function. NOTE: Nothing happens until you call or invoke it!!! </p>
+<code>
+<pre>
+&#60;script type = "text/javascript">
+    function sayHello() {
+    alert("Hello there");
+    }
+&#60;/script&#62;
+</pre></code>
+<h2>Calling a Function</h2>
+<p>Click the following button to call the function</p>      
+
+<script type = "text/javascript">
+    function sayHello() {
+    alert("Hello there");
+    }
+</script>
+<form>
+<input type = "button" onclick = "sayHello()" value = "Say Hello">
+</form>      
+<p>This is the code to call the function:</p>
+<pre>
+&#60;input type = "button" onclick = "sayHello()" value = "Say Hello"&#62;
+</pre>
+</div>
+<div class="callout">
+<b>Beginner's Biggest Mistake</b>
+<p>The biggest mistake a beginner makes is to write a function and forget to call the function. A function doesn't work until you invoke or call it.</p>
+</div>
+</section>
+</body>
+</html>
